@@ -1,5 +1,12 @@
 Tsumekusa - DOM System
 ======================
+Tsumekusa provides a DOM system (not equivalent to W3C DOM) to publish to cross-media.
+
+Install
+=======
+```
+npm install tsumekusa
+```
 
 License
 =======
