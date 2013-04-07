@@ -1,11 +1,11 @@
 // This script licensed under the MIT.
 // http://orgachem.mit-license.org
 
-var Benchmark = require('../../node_modules/benchmark');
-var basePath = '../../util';
+var Benchmark = require('benchmark');
+
+var basePath = '../lib';
 var string = require(basePath + '/string');
 var WordWrapper = require(basePath + '/publishing/WordWrapper');
-var WordWrapper2 = require(basePath + '/publishing/WordWrapper2');
 var Indent = require(basePath + '/publishing/Indent');
 
 var BASE_LINE_WIDTH = 80;
@@ -17,14 +17,9 @@ INDENT_LINEAR.getIndentWidth = function(lineIdx) {
   return Math.floor(lineIdx / 8);
 };
 
-var wrapper = new WordWrapper()
-var wrapper2 = new WordWrapper2(BASE_LINE_WIDTH);
-
-var wrapperConst = new WordWrapper()
-var wrapper2Const = new WordWrapper2(BASE_LINE_WIDTH, INDENT_CONST);
-
-var wrapperLinear = new WordWrapper()
-var wrapper2Linear = new WordWrapper2(BASE_LINE_WIDTH, INDENT_LINEAR);
+var wrapper = new WordWrapper(BASE_LINE_WIDTH);
+var wrapperConst = new WordWrapper(BASE_LINE_WIDTH, INDENT_CONST);
+var wrapperLinear = new WordWrapper(BASE_LINE_WIDTH, INDENT_LINEAR);
 
 // Definition of Lorem Ipsum {{{
 var LOREM_IPSUM = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit sodales libero nec faucibus. Donec mattis arcu ac orci volutpat sit amet volutpat nunc tristique. Vivamus viverra pulvinar est vestibulum varius. Curabitur et enim eros, a rhoncus nisl. Curabitur cursus posuere lacus, nec tristique massa sagittis nec. Quisque ac ante et ante luctus ultrices. Donec mattis elementum lacus, et adipiscing enim tempus at.',
@@ -40,35 +35,19 @@ var suite = new Benchmark.Suite();
 
 suite
     .add('WordWrapper#wrap with no indent', function() {
-      var wrapper = new WordWrapper()
-      wrapper.wrap(LOREM_IPSUM, BASE_LINE_WIDTH);
-    })
-    .add('WordWrapper2#wrap with no indent', function() {
-      var wrapper2 = new WordWrapper2(BASE_LINE_WIDTH);
+      var wrapper2 = new WordWrapper(BASE_LINE_WIDTH);
       wrapper2.wrap(LOREM_IPSUM);
     })
     .add('WordWrapper#wrap with constant width indent', function() {
-      var wrapper = new WordWrapper()
-      wrapper.wrap(LOREM_IPSUM, BASE_LINE_WIDTH, INDENT_CONST);
-    })
-    .add('WordWrapper2#wrap with constant width indent', function() {
-      var wrapper2 = new WordWrapper2(BASE_LINE_WIDTH, INDENT_CONST);
+      var wrapper2 = new WordWrapper(BASE_LINE_WIDTH, INDENT_CONST);
       wrapper2.wrap(LOREM_IPSUM);
     })
     .add('WordWrapper#wrap with linear width indent', function() {
-      var wrapper = new WordWrapper()
-      wrapper.wrap(LOREM_IPSUM, BASE_LINE_WIDTH, INDENT_LINEAR);
-    })
-    .add('WordWrapper2#wrap with linear width indent', function() {
-      var wrapper2 = new WordWrapper2(BASE_LINE_WIDTH, INDENT_LINEAR);
+      var wrapper2 = new WordWrapper(BASE_LINE_WIDTH, INDENT_LINEAR);
       wrapper2.wrap(LOREM_IPSUM);
     })
     .add('WordWrapper#wrap with hyphenation', function() {
-      var wrapper = new WordWrapper()
-      wrapper.wrap(LOREM_IPSUM, HYPHENATION_LINE_WIDTH);
-    })
-    .add('WordWrapper2#wrap with hyphenation', function() {
-      var wrapper2 = new WordWrapper2(HYPHENATION_LINE_WIDTH);
+      var wrapper2 = new WordWrapper(HYPHENATION_LINE_WIDTH);
       wrapper2.wrap(LOREM_IPSUM);
     })
     .on('complete', function() {
