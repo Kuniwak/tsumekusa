@@ -2,6 +2,8 @@ Tsumekusa - DOM System
 ======================
 Tsumekusa provides a DOM system (not equivalent to W3C DOM) to publish to cross-media.
 
+In default, Tsumekusa publish a document optimized to a Console.
+
 Install
 =======
 ```
