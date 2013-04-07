@@ -1,7 +1,8 @@
 Tsumekusa - DOM System
 ======================
-Tsumekusa provides a DOM system (not equivalent to W3C DOM) to publish to cross-media.
+[![Build Status](https://travis-ci.org/OrgaChem/tsumekusa.png?branch=master)](https://travis-ci.org/OrgaChem/tsumekusa)
 
+Tsumekusa provides a DOM system (not equivalent to W3C DOM) to publish to cross-media.
 In default, Tsumekusa publish a document optimized to a Console.
 
 Install
