@@ -1,0 +1,19 @@
+// This script licensed under the MIT.
+// http://orgachem.mit-license.org
+
+
+var basePath = '../../../util';
+var InlineCode = require(basePath + '/dom/InlineCode');
+
+var registry = require(basePath + '/publishing/registry');
+var publishers = require(basePath + '/publishing/DefaultPublishers');
+
+registry.registerPublishers(publishers);
+
+
+exports.testPublish = function(test) {
+  var code = new InlineCode('foo.bar()');
+
+  test.equal(code.publish(), '`foo.bar()`');
+  test.done();
+};

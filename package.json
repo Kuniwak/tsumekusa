@@ -1,0 +1,37 @@
+{
+  "name": "tsumekusa",
+  "description": "Document object model for cross-medias.",
+  "version": "0.0.0",
+  "author": "Orga Chem <orga.chem.job@gmail.com>",
+  "keywords": [
+    "dom",
+    "tsumekusa"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OrgaChem/tsumekusa.git"
+  },
+  "bugs": {
+    "mail": "orga.chem.job@gmail.com",
+    "url": "https://github.com/OrgaChem/tsumekusa/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://orgachem.mit-license.org/"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "nodeunit": "~0.8.0"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
