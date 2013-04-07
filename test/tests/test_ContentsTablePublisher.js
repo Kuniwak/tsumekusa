@@ -2,16 +2,12 @@
 // http://orgachem.mit-license.org
 
 
-var basePath = '../../../util';
-var Container = require(basePath + '/dom/Container');
-var ContentsTablePublisher = require(basePath +
-    '/publishing/ContentsTablePublisher');
-var Paragraph = require(basePath + '/dom/Paragraph');
+var tsumekusa = require('../../lib');
+var Container = tsumekusa.Container;
+var Paragraph = tsumekusa.Paragraph;
+var ContentsTablePublisher = require(
+    '../../lib/publishing/ContentsTablePublisher');
 
-var registry = require(basePath + '/publishing/registry');
-var publishers = require(basePath + '/publishing/DefaultPublishers');
-
-registry.registerPublishers(publishers);
 
 // Lorem Ipsum {{{
 var LOREM_IPSUM = [
@@ -23,47 +19,49 @@ var LOREM_IPSUM = [
 ];
 //}}}
 
-exports.testPublish = function(test) {
-  var publisher = new ContentsTablePublisher();
+module.exports = {
+  'publish': function(test) {
+    var publisher = new ContentsTablePublisher();
 
-  var container1 = new Container('container1', null, true);
-  var container2 = new Container('container2', null, true);
-  var container3 = new Container('container3', null, true);
-  var container4 = new Container('container4', null, true);
+    var container1 = new Container('container1', null, true);
+    var container2 = new Container('container2', null, true);
+    var container3 = new Container('container3', null, true);
+    var container4 = new Container('container4', null, true);
 
-  var subContainers1 = container1.getSubContainers();
-  var subContainers2 = container2.getSubContainers();
-  var subContainers3 = container3.getSubContainers();
-  var subContainers4 = container4.getSubContainers();
+    var subContainers1 = container1.getSubContainers();
+    var subContainers2 = container2.getSubContainers();
+    var subContainers3 = container3.getSubContainers();
+    var subContainers4 = container4.getSubContainers();
 
-  var topElements1 = container1.getTopElements();
-  var topElements2 = container2.getTopElements();
-  var topElements3 = container3.getTopElements();
-  var topElements4 = container4.getTopElements();
+    var topElements1 = container1.getTopElements();
+    var topElements2 = container2.getTopElements();
+    var topElements3 = container3.getTopElements();
+    var topElements4 = container4.getTopElements();
 
-  subContainers1.addChild(container2);
-  subContainers2.addChild(container3);
-  subContainers1.addChild(container4);
+    subContainers1.addChild(container2);
+    subContainers2.addChild(container3);
+    subContainers1.addChild(container4);
 
-  var p1 = new Paragraph(LOREM_IPSUM[0]);
-  var p2 = new Paragraph(LOREM_IPSUM[1]);
-  var p3 = new Paragraph(LOREM_IPSUM[2]);
-  var p4 = new Paragraph(LOREM_IPSUM[3]);
-  var p5 = new Paragraph(LOREM_IPSUM[0]);
+    var p1 = new Paragraph(LOREM_IPSUM[0]);
+    var p2 = new Paragraph(LOREM_IPSUM[1]);
+    var p3 = new Paragraph(LOREM_IPSUM[2]);
+    var p4 = new Paragraph(LOREM_IPSUM[3]);
+    var p5 = new Paragraph(LOREM_IPSUM[0]);
 
-  topElements1.addChild(p1);
-  topElements1.addChild(p2);
-  topElements2.addChild(p3);
-  topElements3.addChild(p4);
-  topElements4.addChild(p5);
+    topElements1.addChild(p1);
+    topElements1.addChild(p2);
+    topElements2.addChild(p3);
+    topElements3.addChild(p4);
+    topElements4.addChild(p5);
 
-  var CORRECT = [
-    'CONTENTS',
-    '  1. container2',
-    '     1.1 container3',
-    '  2. container4'
-  ].join('\n');
+    var CORRECT = [
+      'CONTENTS',
+      '  1. container2',
+      '     1.1 container3',
+      '  2. container4'
+    ].join('\n');
 
-  test.equal(publisher.publish(container1), CORRECT);
-  test.done();
+    test.equal(publisher.publish(container1), CORRECT);
+    test.done();
+  }
 };

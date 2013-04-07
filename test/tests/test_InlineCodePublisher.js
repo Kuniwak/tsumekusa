@@ -2,18 +2,15 @@
 // http://orgachem.mit-license.org
 
 
-var basePath = '../../../util';
-var InlineCode = require(basePath + '/dom/InlineCode');
-
-var registry = require(basePath + '/publishing/registry');
-var publishers = require(basePath + '/publishing/DefaultPublishers');
-
-registry.registerPublishers(publishers);
+var tsumekusa = require('../../lib');
+var InlineCode = tsumekusa.InlineCode;
 
 
-exports.testPublish = function(test) {
-  var code = new InlineCode('foo.bar()');
+module.exports = {
+  'publish': function(test) {
+    var code = new InlineCode('foo.bar()');
 
-  test.equal(code.publish(), '`foo.bar()`');
-  test.done();
+    test.equal(code.publish(), '`foo.bar()`');
+    test.done();
+  }
 };

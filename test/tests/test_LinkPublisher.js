@@ -2,18 +2,15 @@
 // http://orgachem.mit-license.org
 
 
-var basePath = '../../../util';
-var Link = require(basePath + '/dom/Link');
-
-var registry = require(basePath + '/publishing/registry');
-var publishers = require(basePath + '/publishing/DefaultPublishers');
-
-registry.registerPublishers(publishers);
+var tsumekusa = require('../../lib');
+var Link = tsumekusa.Link;
 
 
-exports.testPublish = function(test) {
-  var link = new Link('foo.bar');
+module.exports = {
+  'publish': function(test) {
+    var link = new Link('foo.bar');
 
-  test.equal(link.publish(), '\\foo.bar\\');
-  test.done();
+    test.equal(link.publish(), '\\foo.bar\\');
+    test.done();
+  }
 };

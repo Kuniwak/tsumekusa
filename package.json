@@ -1,6 +1,6 @@
 {
   "name": "tsumekusa",
-  "description": "Document object model for cross-medias.",
+  "description": "DOM system (not equivalent to the W3C DOM) for cross-media.",
   "version": "0.0.0",
   "author": "Orga Chem <orga.chem.job@gmail.com>",
   "keywords": [
@@ -29,9 +29,11 @@
     }
   ],
   "readmeFilename": "README.md",
-  "dependencies": {
-    "nodeunit": "~0.8.0"
+  "dependencies": {},
+  "devDependencies": {
+    "nodeunit": "~0.8.0",
+    "benchmark": "~1.0.0"
   },
-  "devDependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "8649a9fe8b1a68340be25772451d4bf9deec4855"
 }
