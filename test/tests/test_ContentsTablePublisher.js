@@ -23,10 +23,10 @@ module.exports = {
   'publish': function(test) {
     var publisher = new ContentsTablePublisher();
 
-    var container1 = new Container('container1', null, true);
-    var container2 = new Container('container2', null, true);
-    var container3 = new Container('container3', null, true);
-    var container4 = new Container('container4', null, true);
+    var container1 = new Container('container1');
+    var container2 = new Container('container2');
+    var container3 = new Container('container3');
+    var container4 = new Container('container4');
 
     var subContainers1 = container1.getSubContainers();
     var subContainers2 = container2.getSubContainers();
@@ -56,9 +56,9 @@ module.exports = {
 
     var CORRECT = [
       'CONTENTS',
-      '  1. container2',
-      '     1.1 container3',
-      '  2. container4'
+      '  container2',
+      '    container3',
+      '  container4'
     ].join('\n');
 
     test.equal(publisher.publish(container1), CORRECT);

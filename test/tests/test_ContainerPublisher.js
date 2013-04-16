@@ -52,7 +52,7 @@ module.exports = {
 
     // Correct data {{{
     var CORRECT = [
-      '0. container1',
+      'container1',
       '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel dolor',
       '  nunc. Nam neque erat, dignissim eu ullamcorper id, pellentesque ut ante.',
       '  Pellentesque sit amet viverra neque. Cum sociis natoque penatibus et magnis',
@@ -69,7 +69,7 @@ module.exports = {
       '  Integer bibendum facilisis consequat. Curabitur interdum turpis et nibh',
       '  iaculis vel dictum quam pretium. Pellentesque ac fringilla orci.',
       '',
-      '1. container2',
+      'container2',
       '  In ut erat eu lorem dignissim dapibus. In pellentesque nulla vel mi tincidunt',
       '  molestie sed nec tortor. Vivamus adipiscing magna ut urna tempus eget luctus',
       '  dolor ullamcorper. Etiam cursus felis ut diam luctus eu tristique risus',
@@ -78,7 +78,7 @@ module.exports = {
       '  lectus diam. Sed ut mauris orci, in pulvinar velit. Nullam metus nulla,',
       '  placerat id porta eget, sollicitudin sit amet tellus.',
       '',
-      '1.1 container3',
+      'container3',
       '  Nullam tristique, mi non laoreet interdum, tellus felis accumsan metus, et',
       '  pulvinar eros purus ut quam. Vestibulum convallis metus et metus pellentesque',
       '  vulputate. Nam lacinia, nulla vel imperdiet pellentesque, felis magna',
@@ -94,7 +94,7 @@ module.exports = {
       '  Etiam vestibulum, dolor rhoncus tristique congue, neque mi ullamcorper dolor,',
       '  posuere consequat metus ligula sit amet ante. Quisque non commodo dolor.',
       '',
-      '2. container4',
+      'container4',
       '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel dolor',
       '  nunc. Nam neque erat, dignissim eu ullamcorper id, pellentesque ut ante.',
       '  Pellentesque sit amet viverra neque. Cum sociis natoque penatibus et magnis',

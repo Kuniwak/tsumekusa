@@ -21,10 +21,10 @@ module.exports = {
   'publish': function(test) {
     var document = new Document('Sample', 'doc.txt');
 
-    var container1 = new Container('container1', null, true);
-    var container2 = new Container('container2', null, true);
-    var container3 = new Container('container3', null, true);
-    var container4 = new Container('container4', null, true);
+    var container1 = new Container('container1');
+    var container2 = new Container('container2');
+    var container3 = new Container('container3');
+    var container4 = new Container('container4');
 
     var docSubContainer = document.getSubContainers();
     var subContainers1 = container1.getSubContainers();
@@ -70,12 +70,12 @@ module.exports = {
       '  tortor. Sed non orci at leo auctor cursus.',
       '',
       'CONTENTS',
-      '  1. container1',
-      '     1.1 container2',
-      '         1.1.1 container3',
-      '  2. container4',
+      '  container1',
+      '    container2',
+      '      container3',
+      '  container4',
       '',
-      '1. container1',
+      'container1',
       '  Integer consequat lectus a est malesuada porta. Vivamus tincidunt, odio nec',
       '  pellentesque tempus, diam tellus pulvinar odio, et condimentum magna tortor',
       '  sit amet dolor. Nulla dignissim risus vitae felis mattis ut aliquam magna',
@@ -91,7 +91,7 @@ module.exports = {
       '  lectus diam. Sed ut mauris orci, in pulvinar velit. Nullam metus nulla,',
       '  placerat id porta eget, sollicitudin sit amet tellus.',
       '',
-      '1.1 container2',
+      'container2',
       '  Nullam tristique, mi non laoreet interdum, tellus felis accumsan metus, et',
       '  pulvinar eros purus ut quam. Vestibulum convallis metus et metus pellentesque',
       '  vulputate. Nam lacinia, nulla vel imperdiet pellentesque, felis magna',
@@ -107,7 +107,7 @@ module.exports = {
       '  Etiam vestibulum, dolor rhoncus tristique congue, neque mi ullamcorper dolor,',
       '  posuere consequat metus ligula sit amet ante. Quisque non commodo dolor.',
       '',
-      '1.1.1 container3',
+      'container3',
       '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel dolor',
       '  nunc. Nam neque erat, dignissim eu ullamcorper id, pellentesque ut ante.',
       '  Pellentesque sit amet viverra neque. Cum sociis natoque penatibus et magnis',
@@ -117,7 +117,7 @@ module.exports = {
       '  ac pellentesque lectus. Praesent vitae augue at nulla pulvinar varius a mattis',
       '  tortor. Sed non orci at leo auctor cursus.',
       '',
-      '2. container4',
+      'container4',
       '  Integer consequat lectus a est malesuada porta. Vivamus tincidunt, odio nec',
       '  pellentesque tempus, diam tellus pulvinar odio, et condimentum magna tortor',
       '  sit amet dolor. Nulla dignissim risus vitae felis mattis ut aliquam magna',
