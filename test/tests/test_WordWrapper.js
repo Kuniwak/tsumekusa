@@ -17,7 +17,7 @@ var LOREM_IPSUM = [[
 
 
 module.exports = {
-  'wrap without indent': function(test) {
+  'Wrap without an indents': function(test) {
     // General condition
     var CORRECT = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor',
@@ -32,7 +32,7 @@ module.exports = {
     test.equal(wrapper.wrap(LOREM_IPSUM), CORRECT);
     test.done();
   },
-  'wrap with hyphenation': function(test) {
+  'Wrap with a hyphenation': function(test) {
     // Hard condition
     var CORRECT = [
       'Lorem', 'ipsum', 'dolor', 'sit',
@@ -66,7 +66,7 @@ module.exports = {
     test.equal(wrapper.wrap(LOREM_IPSUM), CORRECT);
     test.done();
   },
-  'wrap with a variable indent': function(test) {
+  'Wrap with a variable indent': function(test) {
     var indent = new Indent();
     indent.getIndentWidth = function(lineIdx) {
       return lineIdx;
@@ -89,7 +89,7 @@ module.exports = {
     test.equal(wrapper.wrap(LOREM_IPSUM), CORRECT);
     test.done();
   },
-  'wrap with keep break': function(test) {
+  'Wrap with keeping break': function(test) {
     var CORRECT = [
       'Lorem ipsum dolor sit amet, consectetur',
       'adipisicing elit, sed do eiusmod tempor',

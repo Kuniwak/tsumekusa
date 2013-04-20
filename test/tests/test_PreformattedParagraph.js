@@ -12,7 +12,7 @@ var LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
 
 
 module.exports = {
-  'publish': function(test) {
+  'Publish a preformatted paragraph': function(test) {
     var p = new PreformattedParagraph(LOREM_IPSUM);
 
     var CORRECT = [

@@ -7,7 +7,7 @@ var InlineCode = tsumekusa.InlineCode;
 
 
 module.exports = {
-  'publish': function(test) {
+  'Publish an inline code': function(test) {
     var code = new InlineCode('foo.bar()');
 
     test.equal(code.publish(), '`foo.bar()`');

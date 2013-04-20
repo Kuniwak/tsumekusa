@@ -18,7 +18,7 @@ var LOREM_IPSUM = [
 //}}}
 
 module.exports = {
-  'publish': function(test) {
+  'Publish a container': function(test) {
     var container1 = new Container('container1');
     var container2 = new Container('container2');
     var container3 = new Container('container3');

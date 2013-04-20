@@ -7,7 +7,7 @@ var Code = tsumekusa.Code;
 
 
 module.exports = {
-  'publish': function(test) {
+  'Publish a code': function(test) {
     var CODE = [
       'function example() {',
       '  document.write("Hello, world!");',

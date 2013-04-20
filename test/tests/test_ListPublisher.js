@@ -9,7 +9,7 @@ var Paragraph = tsumekusa.Paragraph;
 
 
 module.exports = {
-  'publish a list by specified list markers': function(test) {
+  'Publish a list by specified list markers': function(test) {
     var list = new List();
 
     var arr1 = new ElementArray();
@@ -39,7 +39,7 @@ module.exports = {
     test.equal(list.publish(), CORRECT);
     test.done();
   },
-  'publish an ordered list': function(test) {
+  'Publish an ordered list': function(test) {
     var list = new List(List.ListType.ORDERED);
 
     var arr1 = new ElementArray();
@@ -77,7 +77,7 @@ module.exports = {
     test.equal(list.publish(), CORRECT);
     test.done();
   },
-  'publish an unordered list': function(test) {
+  'Publish an unordered list': function(test) {
     var list = new List(List.ListType.UNORDERED);
 
     var arr1 = new ElementArray();
@@ -115,7 +115,7 @@ module.exports = {
     test.equal(list.publish(), CORRECT);
     test.done();
   },
-  'publish a nested list': function(test) {
+  'Publish a nested list': function(test) {
     var list1 = new List(List.ListType.ORDERED);
     var list2 = new List(List.ListType.ORDERED);
     var list3 = new List(List.ListType.ORDERED);

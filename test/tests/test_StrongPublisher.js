@@ -7,7 +7,7 @@ var Strong = tsumekusa.Strong;
 
 
 module.exports = {
-  'publish': function(test) {
+  'Publish a strong': function(test) {
     var strong = new Strong('foo.bar');
 
     test.equal(strong.publish(), '#foo.bar#');

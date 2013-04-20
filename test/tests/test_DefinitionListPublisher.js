@@ -9,7 +9,7 @@ var ElementArray = tsumekusa.ElementArray;
 
 
 module.exports = {
-  'publish a definition list by specified list markers': function(test) {
+  'Publish a definition list by specified list markers': function(test) {
     var defList = new DefinitionList();
 
     var term1 = new Paragraph('Term1');
@@ -51,7 +51,7 @@ module.exports = {
 
     test.done();
   },
-  'publish a no-marker definition list': function(test) {
+  'Publish a no-marker definition list': function(test) {
     var defList = new DefinitionList();
 
     var term1 = new Paragraph('Term1');
@@ -93,7 +93,7 @@ module.exports = {
 
     test.done();
   },
-  'publish an oredered definition list': function(test) {
+  'Publish an oredered definition list': function(test) {
     var defList = new DefinitionList(DefinitionList.ListType.ORDERED);
 
     var term1 = new Paragraph('Term1');
@@ -134,7 +134,7 @@ module.exports = {
     test.equal(defList.publish(), CORRECT);
     test.done();
   },
-  'publish an unordered definition list': function(test) {
+  'Publish an unordered definition list': function(test) {
     var defList = new DefinitionList(DefinitionList.ListType.UNORDERED);
 
     var term1 = new Paragraph('Term1');
@@ -176,7 +176,7 @@ module.exports = {
 
     test.done();
   },
-  'publish a nested definition list': function(test) {
+  'Publish a nested definition list': function(test) {
     var defList1 = new DefinitionList(DefinitionList.ListType.UNORDERED);
     var defList2 = new DefinitionList(DefinitionList.ListType.UNORDERED);
 

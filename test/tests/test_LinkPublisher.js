@@ -7,7 +7,7 @@ var Link = tsumekusa.Link;
 
 
 module.exports = {
-  'publish': function(test) {
+  'Publish a link': function(test) {
     var link = new Link('foo.bar');
 
     test.equal(link.publish(), '\\foo.bar\\');
