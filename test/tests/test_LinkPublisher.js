@@ -4,13 +4,15 @@
 
 var tsumekusa = require('../../lib');
 var Link = tsumekusa.Link;
+var Reference = tsumekusa.Reference;
 
 
 module.exports = {
   'Publish a link': function(test) {
-    var link = new Link('foo.bar');
+    var ref = new Reference('id', 'file_name.tsumekusa');
+    var link = new Link(ref);
 
-    test.equal(link.publish(), '\\foo.bar\\');
+    test.equal(link.publish(), '\\id\\');
     test.done();
   }
 };
