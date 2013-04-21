@@ -19,7 +19,7 @@ var LOREM_IPSUM = [
 
 module.exports = {
   'Publish a document': function(test) {
-    var document = new Document('Sample', 'doc.txt');
+    var document = new Document('Sample', 'doc.tsumekusa');
 
     var container1 = new Container('container1');
     var container2 = new Container('container2');
@@ -68,12 +68,6 @@ module.exports = {
       '  Donec metus justo, iaculis eget elementum at, gravida vitae ligula. Curabitur',
       '  ac pellentesque lectus. Praesent vitae augue at nulla pulvinar varius a mattis',
       '  tortor. Sed non orci at leo auctor cursus.',
-      '',
-      'CONTENTS',
-      '  container1',
-      '    container2',
-      '      container3',
-      '  container4',
       '',
       'container1',
       '  Integer consequat lectus a est malesuada porta. Vivamus tincidunt, odio nec',
