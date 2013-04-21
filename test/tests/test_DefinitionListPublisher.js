@@ -9,48 +9,6 @@ var ElementArray = tsumekusa.ElementArray;
 
 
 module.exports = {
-  'Publish a definition list by specified list markers': function(test) {
-    var defList = new DefinitionList();
-
-    var term1 = new Paragraph('Term1');
-    var descs1 = new ElementArray();
-    descs1.addChild(new Paragraph('Desc1-1'));
-    descs1.addChild(new Paragraph('Desc1-2'));
-    defList.addDefinition(term1, descs1);
-
-    var term2 = new Paragraph('Term2');
-    var descs2 = new ElementArray();
-    descs2.addChild(new Paragraph('Desc2-1'));
-    descs2.addChild(new Paragraph('Desc2-2'));
-    defList.addDefinition(term2, descs2, DefinitionList.ListType.ORDERED);
-
-    var term3 = new Paragraph('Term3');
-    var descs3 = new ElementArray();
-    descs3.addChild(new Paragraph('Desc3-1'));
-    descs3.addChild(new Paragraph('Desc3-2'));
-    defList.addDefinition(term3, descs3, DefinitionList.ListType.UNORDERED);
-
-    var CORRECT = [
-      'Term1',
-      '  Desc1-1',
-      '',
-      '  Desc1-2',
-      '',
-      '2) Term2',
-      '  Desc2-1',
-      '',
-      '  Desc2-2',
-      '',
-      '- Term3',
-      '  Desc3-1',
-      '',
-      '  Desc3-2'
-    ].join('\n');
-
-    test.equal(defList.publish(), CORRECT);
-
-    test.done();
-  },
   'Publish a no-marker definition list': function(test) {
     var defList = new DefinitionList();
 
