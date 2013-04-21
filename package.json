@@ -1,7 +1,7 @@
 {
   "name": "tsumekusa",
   "description": "DOM system (not equivalent to the W3C DOM) for cross-media.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "author": "Orga Chem <orga.chem.job@gmail.com>",
   "keywords": [
     "dom",
