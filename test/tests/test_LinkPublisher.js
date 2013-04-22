@@ -14,5 +14,11 @@ module.exports = {
 
     test.equal(link.publish(), '\\id\\');
     test.done();
+  },
+  'Publish an URI link': function(test) {
+    var link = new Link('http://www.example.com');
+
+    test.equal(link.publish(), '\\http://www.example.com\\');
+    test.done();
   }
 };
